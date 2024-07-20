@@ -25,7 +25,12 @@ User.init({
   role: {
     type: DataTypes.ENUM('student', 'teacher', 'admin', 'assistant_teacher'),
     allowNull: false
-  }
+  },
+  isBlocked: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+    defaultValue: false
+  }   
 }, {
   sequelize,
   modelName: 'User'

@@ -1,8 +1,8 @@
 const express = require('express');
-const { createTeacher, getAllTeachers, getTeacherById, updateTeacher, deleteTeacher } = require('../controllers/teacherController');
+const {  getAllTeachers, getTeacherById, updateTeacher, deleteTeacher } = require('../controllers/teacherController');
 const router = express.Router();
+// [AuthMiddleware.verifyToken, AuthMiddleware.authorize(['admin'])]
 
-router.post('/', createTeacher);
 router.get('/', getAllTeachers);
 router.get('/:id', getTeacherById);
 router.put('/:id', updateTeacher);
